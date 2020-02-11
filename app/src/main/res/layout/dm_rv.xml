@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/dm_rv_chats"
+    android:paddingTop="12dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dm_rv_pp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="6dp"
+        app:srcCompat="@drawable/ic_account_circle_white_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_marginStart="12dp"
+        android:id="@+id/dm_rv_sendername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sender Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dm_rv_pp"
+        app:layout_constraintTop_toTopOf="@id/dm_rv_pp"
+        app:layout_constraintBottom_toBottomOf="@id/dm_rv_pp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/dm_rv_msg"
+        app:layout_constraintTop_toBottomOf="@id/dm_rv_sendername"
+        app:layout_constraintStart_toStartOf="@id/dm_rv_sendername"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:text="🚫 message has been removed from device"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/dm_rv_pp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
